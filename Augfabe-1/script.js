@@ -8,7 +8,7 @@ const server = http.createServer((request, response) => {
   } else {
     response.statusCode = 200
     response.setHeader('Content-Type', 'text/plain')
-    response.end('Authorization header received')
+    response.end('Authorization')
   } 
 })
 
