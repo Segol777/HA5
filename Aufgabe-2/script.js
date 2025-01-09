@@ -6,7 +6,7 @@ const port = process.env.PORT || 3030;
 
 const server = http.createServer((req, res) => {
   try {
-      throw new Error('Test error')
+      throw new Error('Error')
   } catch (error) {
       res.statusCode = 500
       res.setHeader('Content-Type', 'text/plain')
