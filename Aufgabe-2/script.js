@@ -10,14 +10,14 @@ const server = http.createServer((req, res) => {
   } catch (error) {
       res.statusCode = 500
       res.setHeader('Content-Type', 'text/plain')
-      res.end('Internal server error')
+      res.end('Server error')
 
       const timeStamp = new Date().toISOString()
       const log = `${timeStamp} - ${error.message}\n`
 
       fs.appendFile('errors.log', log, (error) => {
         if (error) {
-          console.error('Error writing to log file', error);
+          console.error('Error in log file', error);
         }
       })
   }
