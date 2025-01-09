@@ -8,18 +8,18 @@ const server = http.createServer((req, res) => {
   if (req.method === 'PUT') {
     res.statusCode = 200
     res.setHeader('Content-Type', 'text/plain')
-    res.end('PUT-request has been processed')
+    res.end('PUT-Processed')
 
   } else if (req.method === 'DELETE') {
       res.statusCode = 200
       res.setHeader('Content-Type', 'text/plain')
-      res.end('DELETE-request has been processed')
+      res.end('DELETE-Processed')
 
     } 
     else {
       res.statusCode = 405 
       res.setHeader('Content-Type', 'text/plain')
-      res.end('The method is not supported');
+      res.end('Supported');
     }
 })
 
